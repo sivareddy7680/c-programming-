@@ -112,6 +112,179 @@ printf("\nTotal count of digits entered = %d",digits);
 return 0;
 }
 
+----------------------------------
+Lab sessions
+
+1)
+include <stdio.h>
+
+int main()
+{
+    int num1, num2;
+    int sum, sub, mult, mod;
+    float div;
+
+    /*
+     * Input two numbers from user
+     */
+    printf("Enter any two numbers: ");
+    scanf("%d%d", &num1, &num2);
+
+    /*
+     * Perform all arithmetic operations
+     */ 
+    sum = num1 + num2;
+    sub = num1 - num2;
+    mult = num1 * num2;
+    div = (float)num1 / num2;
+    mod = num1 % num2;
+
+    /*
+     * Print result of all arithmetic operations
+     */
+    printf("SUM = %d\n", sum);
+    printf("DIFFERENCE = %d\n", sub);
+    printf("PRODUCT = %d\n", mult);
+    printf("QUOTIENT = %f\n", div);
+    printf("MODULUS = %d", mod);
+
+    return 0; 
+}
+---------------------------------------
+2)#include <stdio.h>
+
+int main(){
+
+    int Num, rev_Num = 0, remainder;
+
+    printf("Enter the number to reverse: ");
+
+    scanf("%d", &Num);    
+
+    while (Num != 0){
+
+        remainder = Num % 10;
+
+        rev_Num = rev_Num * 10 + remainder;
+
+        Num = Num/10;
+
+    }    
+
+    printf("The reversed number is: %d", rev_Num);
+
+    return 0;
 
 
-4)
+---------------------------------------
+3)#include <stdio.h>
+void main(){
+  int i,f=1,num;
+
+  printf("Input the number : ");
+  scanf("%d",&num);
+
+  for(i=1;i<=num;i++)
+      f=f*i;
+
+  printf("The Factorial of %d is: %d\n",num,f);
+}
+-----------------------------_----------
+4)# include <stdio.h>   
+
+int main()   
+{   
+ int i, Number, Sum = 0 ;   
+  
+ printf("\n Please Enter any number \n") ;   
+ scanf("%d", &Number) ;   
+ 
+ for(i = 1 ; i < Number ; i++)   
+  {   
+   if(Number % i == 0)   
+     Sum = Sum + i ;   
+  }    
+
+ if (Sum == Number)   
+    printf("\n %d is a Perfect Number", Number) ;   
+ else   
+    printf("\n%d is not the Perfect Number", Number) ;   
+
+return 0 ;   
+}
+
+------------------------------------------
+5)#include<stdio.h>
+int main()
+{
+	int age;
+	printf("enter age:");
+	scanf("%d",&age);
+	if(age>=18){
+	
+	printf("eligible to vote");
+}
+	else{
+	
+	printf("%d not eligigble ");
+	printf("%d years to wait ",18-age);	
+}
+}
+-----------------------------------------
+6)#include <stdio.h>
+int main() {
+    int year;
+    printf("Enter year: ");
+    scanf("%d", &year);
+
+    if(year % 4 == 0)
+        printf("leap year");
+    else
+        printf("Not a leap year");
+    
+    return 0;
+}
+-----------------------------
+7)#include <stdio.h>
+int main() {
+  int n, i;
+  printf("Enter a positive number: ");
+  scanf("%d", &n);
+  for (i = 1; i <= 10; ++i) {
+    printf("%d * %d = %d \n", n, i, n * i);
+  }
+  return 0;
+}
+-------------------------------
+8)nth prime number
+
+#include <stdio.h>
+#include<math.h>
+int
+main ()
+{
+  int rangenumber, c = 0, num = 2, i, letest = 0;
+  printf ("Enter Nth Number\n");
+  scanf ("%d", &rangenumber);
+
+  while (c != rangenumber)
+    {
+      int count = 0;
+      for (i = 2; i <= sqrt (num); i++)
+ {
+   if (num % i == 0)
+     {
+       count++;
+       break;
+     }
+ }
+      if (count == 0)
+ {
+   c++;
+   letest = num;
+ }
+      num = num + 1;
+    }
+  printf ("%dth prime number is %d ",rangenumber,letest);
+  return 0;
+}
